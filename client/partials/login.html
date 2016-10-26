@@ -1,0 +1,9 @@
+<form class="form-group" name="loginform">
+    <label>Your Name:</label>
+    <input class="form-control" type="text" ng-model='newUser.name' ng-minlength='3' required style="width: 300px;"></input><br>
+    <input type="submit" ng-click='login()' class="btn" value="Login" ></input>
+</form>
+<div ng-messages="loginform.$error">
+     <p ng-message="minlength" style="color:#cc0000;">The user name must be at least 2 characters.</p>
+     <p ng-message="required" style="color:#cc0000;">The user name is required.</p>
+</div>
