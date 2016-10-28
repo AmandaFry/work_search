@@ -10,7 +10,7 @@
 
 	.header{
 		/*width:970px;*/
-		min-height: 100px;
+		min-height: 50px;
 		border-top-right-radius: 8px;
 		border-top-left-radius: 8px;
 		background-color:#66c2ff;

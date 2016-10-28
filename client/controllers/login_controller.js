@@ -1,4 +1,4 @@
-myApp.controller('loginController', function (userFactory,$scope, $location,$routeParams,$cookies){
+myApp.controller('loginController', function ($scope, $location,$routeParams,$cookies,userFactory){
 	//when redicerted to '/' page lets remove session
 	$cookies.remove('user')
 

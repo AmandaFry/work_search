@@ -8,7 +8,7 @@ var fs = require('fs');//fs let me communitcate once I am there
 var mongoose = require('mongoose');
 
 // connect to mongoose!
-mongoose.connect('mongodb://localhost/TODObdname');
+mongoose.connect('mongodb://localhost/work_search');
 
 // create a variable that points to the path where all of the models live
 var models_path = path.join(__dirname, './../models');
