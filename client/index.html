@@ -9,7 +9,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -19,6 +19,7 @@
     <script type="text/javascript" src="./js/angular-messages.js"></script>
     <script type="text/javascript" src="./js/angular-cookies.js" ></script>
 
+
     <!-- my app file needs to be second to reac the partials-->
     <script type="text/javascript" src="app.js"></script>    
 
@@ -27,14 +28,14 @@
     <script type="text/javascript" src='./controllers/company_controller.js'></script>
     <script type="text/javascript" src='./controllers/contact_controller.js'></script>
     <script type="text/javascript" src='./controllers/dashboard_controller.js'></script>
-    <script type="text/javascript" src='./controllers/event_controller.js'></script>
+    <script type="text/javascript" src='./controllers/events_controller.js'></script>
     <script type="text/javascript" src='./controllers/login_controller.js'></script>
     <script type="text/javascript" src='./controllers/todo_controller.js'></script>
     <script type="text/javascript" src='./factories/archive_factory.js'></script>
     <script type="text/javascript" src='./factories/company_factory.js'></script>
     <script type="text/javascript" src='./factories/contact_factory.js'></script>
     <script type="text/javascript" src='./factories/dashboard_factory.js'></script>
-    <script type="text/javascript" src='./factories/event_factory.js'></script>
+    <script type="text/javascript" src='./factories/events_factory.js'></script>
     <script type="text/javascript" src='./factories/todo_factory.js'></script>
     <script type="text/javascript" src='./factories/user_factory.js'></script>
 
@@ -46,7 +47,7 @@
             <h1>Work Search</h1>
         </div><!-- end of header content-->
         <div class="maincontent">
-    
+
             <!-- This way I can bring in partials information, this is frame for all the partials -->
             <div ng-view=''></div>
 
