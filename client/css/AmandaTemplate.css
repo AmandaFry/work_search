@@ -55,7 +55,11 @@
 			margin: 10px 0px 10px 0px;
 		}
 
-		.rowleft{
+		.row_left{
+			margin: 10px 0px 10px 0px;
+			text-align: left;
+		}
+		.rowbutton{
 			margin: 15px 0px 0px 170px;
 			text-align: left;
 		}

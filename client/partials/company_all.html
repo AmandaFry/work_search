@@ -1,0 +1,50 @@
+<!-- navigation  -->
+<nav class="nav navbar-nav navbar-right">
+  <div class="container-fluid">
+    	<ul class="nav navbar-nav">
+  			<li><a href="#/dashboard">Home</a></li>
+  			<li><a href="#/company_new">New Company</a></li>
+	      	<li><a href="#/contact">Contact</a></li>
+	      	<li><a href="#/events">Events</a></li>
+	      	<li><a href="#/todo">Todo</a></li>
+	      	<li><a href="#/">Logout</a></li> 
+		</ul>
+  </div>
+</nav></br>
+
+<p>company all page</p>
+
+<!-- Welcome section and search -->
+<h2>Welcome {{currentUser.name}}</h2>
+<p>{{currentUser._id}}</p>
+</br>
+
+<div class="onRight">
+	<label>Search:</label>
+	<input type="text" ng-model="filter_name">
+</div>
+
+
+<!-- Table for all companies -->
+<table class="table table-striped" style="border:1px solid tan;">
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Location</td>
+			<td>Website</td>
+			<td>Last contected</td>
+			<td>Rating</td>
+			<td>Action</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="company in companys | orderBy: '-createdAt' | filter: filter_name">
+			<td>{{company.name}}</td>
+			<td>{{company.location}}</td>
+			<td>{{company.webiste}}</td>
+			<td>{{company.last_company_date}} {{company.days}}</td>
+			<td>{{company.rating}}</td>
+			<td><a href="#/company/{{company._id}}">Contact Detail</a></td>
+		</tr>
+	</tbody>
+</table>

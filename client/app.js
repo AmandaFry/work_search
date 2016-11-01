@@ -19,13 +19,28 @@ myApp.config(function ($routeProvider){
         controller: 'companyController',
     })
 
+    .when('/company_all',{
+        templateUrl: 'partials/company_all.html',
+        controller: 'companyController',
+    })
+
+    .when('/company_new',{
+        templateUrl: 'partials/company_new.html',
+        controller: 'companyController',
+    })
+
     .when('/contact',{
         templateUrl: 'partials/contact.html',
         controller: 'contactController',
     })
 
-    .when ('/new_contact',{
-        templateUrl: 'partials/new_contact.html',
+    .when('/contact_all',{
+        templateUrl: 'partials/contact_all.html',
+        controller: 'contactController',
+    })
+
+    .when ('/contact_new',{
+        templateUrl: 'partials/contact_new.html',
         controller: 'contactController',       
     })
 

@@ -1,0 +1,93 @@
+<!-- navigation  -->
+<nav class="nav navbar-nav navbar-right">
+  <div class="container-fluid">
+    	<ul class="nav navbar-nav">
+  			<li><a href="#/dashboard">Home</a></li>
+	      	<li><a href="#/contact">Contact</a></li>
+	      	<li><a href="#/events">Events</a></li>
+	      	<li><a href="#/todo">Todo</a></li>
+	      	<li><a href="#/archived">Archived</a></li>
+	      	<li><a href="#/">Logout</a></li> 
+		</ul>
+  </div>
+</nav></br>
+
+<!-- Welcome section and search -->
+<h2>Welcome {{currentUser.name}}</h2>
+<p>{{currentUser._id}}</p>
+</br>
+<p>company page</p>
+
+<form  name="newCompanyform">
+<div class='col'>
+	<div class="row">
+		<label>Name</label>
+		<input class="myinput" type="text" ng-model="newCo.name" ng-minlength='5' required>
+	</div>
+	<div class="row">
+		<label>Type</label>
+		<input class="myinput" type="text" ng-model="newCo.type">
+	</div>	
+	<div class="row">
+		<label>Location</label>
+		<input class="myinput" type="text" ng-model="newCo.location" ng-minlength='2' required>
+	</div>
+	<div class="row">
+		<label>Website</label>
+		<input class="myinput" type="email" ng-model="newCo.website">
+	</div>
+	<div class="row">
+		<label>Address</label>
+		<input class="myinput" type="text" ng-model="newCo.address">
+	</div>
+	<div class="row">
+		<label>Main Number</label>
+		<input class="myinput" type="text" ng-model="newCo.main_number">
+	</div>
+	<div class="row">
+		<label>How found</label>
+		<input class="myinput" type="text" ng-model="newCo.how_found">
+	</div>
+	<div class="row">
+		<label>Size</label>
+		<input class="myinput" type="text" ng-model="newCo.size">
+	</div>
+
+	<div class="rowbutton">
+		<input class="btn btn-primary" type="submit" ng-click="companyCreate()" value="Submit">
+	</div>
+</div>
+<div class="col">
+	<div class="row">
+		<label>Glassdoor score</label>
+		<input class="myinput" type="text" ng-model="newCo.glassdoor_score">
+	</div>
+	<div class="row">
+		<label>Glassdoor link</label>
+		<input class="myinput" type="text" ng-model="newCo.glassdoor_link">
+	</div>
+	<div class="row">
+		<label>Google score</label>
+		<input class="myinput" type="text" ng-model="newCo.google_score">
+	</div>		
+	<div class="row">
+		<label>Google Link</label>
+		<input class="myinput" type="text" ng-model="newCo.google_link">
+	</div>	
+
+	<div class="row">
+		<label>Rating</label>
+		<input class="myinput" type="number" ng-model="newCo.rate" min="1" max="10">
+	</div>
+	<div class="row">
+		<label>Got me work</label>
+		<input class="myinput" type="text" ng-model="newCo.got_me_work">
+	</div>	
+	<div class="row">
+		<label>Notes</label>
+		<!-- <input class="myinput" type="text" ng-model="newCo.notes"> -->
+		<textarea class="myinput" type="text" ng-model="newCo.notes" rows="3"></textarea>
+	</div>
+</div>
+</form>
+

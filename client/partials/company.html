@@ -1,22 +1,116 @@
-<div ng-controller='companyController'>
 <!-- navigation  -->
-	<nav class="nav navbar-nav navbar-right">
-	  <div class="container-fluid">
-	    	<ul class="nav navbar-nav">
-      			<li><a href="#/dashboard">Home</a></li>
-		      	<li><a href="#/contact">Contact</a></li>
-		      	<li><a href="#/events">Events</a></li>
-		      	<li><a href="#/todo">Todo</a></li>
-		      	<li><a href="#/archived">Archived</a></li>
-		      	<li><a href="#/">Logout</a></li> 
-    		</ul>
-	  </div>
-	</nav></br>
+<nav class="nav navbar-nav navbar-right">
+  <div class="container-fluid">
+    	<ul class="nav navbar-nav">
+  			<li><a href="#/dashboard">Home</a></li>
+  			<li><a href="#/compnay_new">New Company</a></li>
+	      	<li><a href="#/contact_all">Contact</a></li>
+	      	<li><a href="#/events">Events</a></li>
+	      	<li><a href="#/todo">Todo</a></li>
+	      	<li><a href="#/">Logout</a></li> 
+		</ul>
+  </div>
+</nav></br>
 
-	<!-- Welcome section and search -->
-	<h2>Welcome {{currentUser.name}}</h2>
-	<p>{{currentUser._id}}</p>
-	</br>
-	<p>company page</p>
+<!-- Welcome section and search -->
+<h2>Welcome {{currentUser.name}}</h2>
+<p>{{currentUser._id}}</p>
+</br>
+<p>company all page</p>
 
+
+<div class='col'>
+	<div class="row_left">
+		<label>Name</label>
+		<p>{{company.name}}</p>
+	</div>
+	<div class="row_left">
+		<label>Type</label>
+		<<p>{{company.type}}</p>
+	</div>	
+	<div class="row_left">
+		<label>Location</label>
+		<p>{{company.location}}</p>
+	</div>
+	<div class="row_left">
+		<label>Website</label>
+		<p>{{company.website}}</p>
+	</div>
+	<div class="row_left">
+		<label>Address</label>
+		<<p>{{company.address}}</p>
+	</div>
+	<div class="row_left">
+		<label>Main number</label>
+		<p>{{company.main_number}}</p>
+	</div>
+	<div class="row_left">
+		<label>How found</label>
+		<p>{{company.how_found}}</p>
+	</div>
+	<div class="row_left">
+		<label>Size</label>
+		<p>{{company.size}}</p>
+	</div>
+	<div class="row_left">
+		<p>{{company.created_at}}</p>
+	</div>
 </div>
+<div class="col">
+	<div class="row_left">
+		<label>Glassdoor score</label>
+		<p>{{company.glassdoor_score}}</p>
+	</div>
+	<div class="row_left">
+		<label>Glassdoor link</label>
+		<p>{{company.glassdoor_link}}</p>
+	</div>
+	<div class="row_left">
+		<label>Google score</label>
+		<p>{{company.google_score}}</p>
+	</div>		
+	<div class="row_left">
+		<label>Google Link</label>
+		<p>{{company.google_link}}</p>
+	</div>	
+
+	<div class="row_left">
+		<label>Rating</label>
+		<p>{{company.}}</p>
+	</div>
+	<div class="row_left">
+		<label>Got me work</label>
+		<p>{{company.got_me_work}}</p>
+	</div>	
+	<div class="row_left">
+		<label>Notes</label>
+		<!-- <input class="myinput" type="text" ng-model="newCo.notes"> -->
+		<textarea class="myinput" rows="3">{{company.notes}}</textarea>
+	</div>
+</div>
+
+<!-- Table for all contacs within that company -->
+<table class="table table-striped" style="border:1px solid tan;">
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Work number</td>
+			<td>Cell number</td>
+			<td>Email</td>
+			<td>Last contected</td>
+			<td>Rating</td>
+			<td>Action</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="contact in contacts | orderBy: '-createdAt' | filter: filter_contact">
+			<td>{{contact.first_name}} {{contact.first_name}}</td>
+			<td>{{contact.work_number}}</td>
+			<td>{{contact.cell_number}}</td>
+			<td>{{contact.emial}}</td>
+			<td>{{contact.last_contact_date}} {{contact.days}}</td>
+			<td>{{contact.rating}}</td>
+			<td><a href="#/contact/{{contact._id}}">Contact Detail</a></td>
+		</tr>
+	</tbody>
+</table>

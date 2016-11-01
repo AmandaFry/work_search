@@ -19,74 +19,96 @@
 <p>{{currentUser._id}}</p>
 </br>
 
-<form  name="newContactform">
 <div class='col'>
-	<div class="row">
-		<label>First Name</label>
-		<input class="myinput" type="text" ng-model="newC.first_name" ng-minlength='5' required>
+	<div class="row_left">
+		<label>First Name: </label>
+		<p>{{contact.first_name}}</p>
 	</div>
-	<div class="row">
+	<div class="row_left">
 		<label>Last Name</label>
-		<input class="myinput" type="text" ng-model="newC.last_name" ng-minlength='2' required>
+		<p>{{contact.last_name}}</p>
 	</div>
-	<div class="row">
+	<div class="row_left">
 		<label>Company</label>
-		<input class="myinput" type="text" ng-model="newC.company">
+		<p>{{contact.company}}</p>
 	</div>
-	<div class="row">
+	<div class="row_left">
 		<label>Work Email</label>
-		<input class="myinput" type="email" ng-model="newC.work_email">
+		<p>{{contact.work_email}}</p>
 	</div>
-	<div class="row">
+	<div class="row_left">
 		<label>Personal Email</label>
-		<input class="myinput" type="email" ng-model="newC.personal_email">
+		<p>{{contact.personal_email}}</p>
 	</div>
-	<div class="row">
+	<div class="row_left">
 		<label>Cell Number</label>
-		<input class="myinput" type="text" ng-model="newC.cell_number">
+		<p>{{contact.cell_number}}</p>
 	</div>
-	<div class="row">
+	<div class="row_left">
 		<label>Work Number</label>
-		<input class="myinput" type="text" ng-model="newC.work_number">
+		<p>{{contact.work_number}}</p>
 	</div>
-	<div class="row">
+	<div class="row_left">
 		<label>Other Number</label>
-		<input class="myinput" type="text" ng-model="newC.other_number">
-	</div>
-	<div class="rowleft">
-		<input class="btn btn-primary" type="submit" ng-click="answerCreate()" value="Submit">
+		<p>{{contact.other_number}}</p>
 	</div>
 </div>
 <div class="col">
-	<div class="row">
+	<div class="row_left">
 		<label>LinkedIn URL</label>
-		<input class="myinput" type="text" ng-model="newC.linkedin">
+		<p>{{contact.linkedin}}</p>
 	</div>	
-	<div class="row">
+	<div class="row_left">
 		<label>How we meet</label>
-		<input class="myinput" type="text" ng-model="newC.how_contact">
+		<p>{{contact.how_we_meet}}</p>
 	</div>	
-	<div class="row">
+	<div class="row_left">
 		<label>When we meet</label>
-		<input class="myinput" type="text" ng-model="newC.when_contact">
+		<p>{{contact.we__meet_date}}</p>
 	</div>	
-	<div class="row">
+	<div class="row_left">
 		<label>Last contact</label>
-		<input class="myinput" type="text" ng-model="newC.last_contact">
+		<p>{{contact.last_contact}}</p>
+		<p>{{contact.last_contact_indays}}</p>
 	</div>	
-	<div class="row">
-		<label>Rate</label>
-		<input class="myinput" type="number" ng-model="newC.rate" min="1" max="10">
+	<div class="row_left">
+		<label>Rating</label>
+		<p>{{contact.rating}}</p>
 	</div>
-	<div class="row">
+	<div class="row_left">
 		<label>Got me work</label>
-		<input class="myinput" type="text" ng-model="newC.got_me_work">
+		<p>{{contact.got_me_work}}</p>
 	</div>	
-	<div class="row">
+	<div class="row_left">
 		<label>Notes</label>
 		<!-- <input class="myinput" type="text" ng-model="newC.notes"> -->
-		<textarea class="myinput" type="text" ng-model="newC.notes" rows="4"></textarea>
+		<textarea class="myinput" row_lefts="4">{{contact.notes}}</textarea>
 	</div>
 </div>
-</form>
 
+<!-- Table for all contact  interaction -->
+<table class="table table-striped" style="border:1px solid tan;">
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Work number</td>
+			<td>Cell number</td>
+			<td>Email</td>
+			<td>Last contected</td>
+			<td>Rating</td>
+			<td>Action</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="contact in contacts | orderBy: '-createdAt' | filter: filter_contact">
+			<td>{{contact.first_name}} {{contact.first_name}}</td>
+			<td>{{contact.company}}</td>
+			<td>{{contact.work_number}}</td>
+			<td>{{contact.cell_number}}</td>
+			<td>{{contact.emial}}</td>
+			<td>{{contact.last_contact_date}} {{contact.days}}</td>
+			<td>{{contact.rating}}</td>
+			<td><a href="#/contact/{{contact._id}}">Contact Detail</a></td>
+		</tr>
+	</tbody>
+</table>

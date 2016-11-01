@@ -1,0 +1,54 @@
+<!-- navigation  -->
+<nav class="nav navbar-nav navbar-right">
+  <div class="container-fluid">
+    	<ul class="nav navbar-nav">
+	      	<li><a href="#/dashboard">Home</a></li>
+	      	<li><a href="#/new_contact">New Contact</a></li>
+  			<li><a href="#/company">Company</a></li>
+	      	<li><a href="#/events">Events</a></li>
+	      	<li><a href="#/todo">Todo</a></li>
+	      	<li><a href="#/archive">Archived</a></li>
+	      	<li><a href="#/">Logout</a></li> 
+		</ul>
+  </div>
+</nav></br>
+
+<p>contact page</p>
+<!-- Welcome section and search -->
+<h2>Welcome {{currentUser.name}}</h2>
+<p>{{currentUser._id}}</p>
+</br>
+
+<div class="onRight">
+	<label>Search:</label>
+	<input type="text" ng-model="filter_contact">
+</div>
+
+<!-- Table for all contact -->
+<table class="table table-striped" style="border:1px solid tan;">
+	<thead>
+		<tr>
+			<td>Name</td>
+			<td>Company</td>
+			<td>Work number</td>
+			<td>Cell number</td>
+			<td>Email</td>
+			<td>Last contected</td>
+			<td>Rating</td>
+			<td>Action</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="contact in contacts | orderBy: '-createdAt' | filter: filter_contact">
+			<td>{{contact.first_name}} {{contact.first_name}}</td>
+			<td>{{contact.company}}</td>
+			<td>{{contact.work_number}}</td>
+			<td>{{contact.cell_number}}</td>
+			<td>{{contact.emial}}</td>
+			<td>{{contact.last_contact_date}} {{contact.days}}</td>
+			<td>{{contact.rating}}</td>
+			<td><a href="#/contact/{{contact._id}}">Contact Detail</a></td>
+		</tr>
+	</tbody>
+</table>
+
