@@ -1,7 +1,11 @@
 myApp.factory('companyFactory', function($http,$cookies){
 	var factory = {};
 
-    console.log('company Factory loaded')
+    factory.create = function(newCo, callback){
+    	$http.post('/company/new', newCo).success(function(data){
+    		callback();
+    	});
+    };
 
     return factory;
 });

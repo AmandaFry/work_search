@@ -6,5 +6,9 @@ module.exports = function(app){
         users.create(req, res);
     });
 
+	app.post('/company/new', function(req,res){
+		console.log('reached company/new route');
+		console.log(req.body);
+	});
 
 }

@@ -11,3 +11,23 @@ var userSchema = new mongoose.Schema({
 //Here where I create Users table
 var Users = mongoose.model('Users', userSchema);
 
+//COMPANY SECTION
+//create the company schema
+var companySchema = new mongoose.Schema({
+	name: {type:String, required:true, minlength:2},
+	type: {type: String},
+	location: {type:String},
+	website: {type:String},
+	address: {type:String},
+	main_number: {type:String},
+	how_found: {type:String},
+	size: {type:String},
+	glassdoor_score: {type:String},
+	google_score: {type:String},
+	rating: {type: Number},
+	got_me_work: {type: String},
+	note: {type: String},
+}, {timestamp: true});
+
+//creating the Compnay table
+var Company = mongoose.model('Company', companySchema);
