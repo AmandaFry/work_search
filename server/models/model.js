@@ -14,6 +14,7 @@ var Users = mongoose.model('Users', userSchema);
 //COMPANY SECTION
 //create the company schema
 var companySchema = new mongoose.Schema({
+	owner: {type:String, required:true},
 	name: {type:String, required:true, minlength:2},
 	type: {type: String},
 	location: {type:String},
@@ -26,8 +27,8 @@ var companySchema = new mongoose.Schema({
 	google_score: {type:String},
 	rating: {type: Number},
 	got_me_work: {type: String},
-	note: {type: String},
-}, {timestamp: true});
+	notes: {type: String},
+}, {timestamps: true});
 
 //creating the Compnay table
 var Company = mongoose.model('Company', companySchema);

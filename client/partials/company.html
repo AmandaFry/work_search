@@ -13,83 +13,60 @@
 </nav></br>
 
 <!-- Welcome section and search -->
-<h2>Welcome {{currentUser.name}}</h2>
-<p>{{currentUser._id}}</p>
-</br>
-<p>company all page</p>
-
+<h2>Company Detail</h2>
+<p>Welcome {{currentUser.name}} - {{currentUser._id}}</p>
 
 <div class='col'>
 	<div class="row_left">
-		<label>Name</label>
-		<p>{{company.name}}</p>
+		<p>Name: <span class="row_left_bold">{{companyDetail.name}}</span></p>
 	</div>
 	<div class="row_left">
-		<label>Type</label>
-		<<p>{{company.type}}</p>
+		<p>Type: <span class="row_left_bold">{{companyDetail.type}}</span></p>
 	</div>	
 	<div class="row_left">
-		<label>Location</label>
-		<p>{{company.location}}</p>
+		<p>Location: <span class="row_left_bold">{{companyDetail.location}}</span></p>
 	</div>
 	<div class="row_left">
-		<label>Website</label>
-		<p>{{company.website}}</p>
+		<p>Website: <span class="row_left_bold">{{companyDetail.website}}</span></p>
 	</div>
 	<div class="row_left">
-		<label>Address</label>
-		<<p>{{company.address}}</p>
+		<p>Address: <span class="row_left_bold">{{companyDetail.address}}</span></p>
 	</div>
 	<div class="row_left">
-		<label>Main number</label>
-		<p>{{company.main_number}}</p>
+		<p>Main Number: <span class="row_left_bold">{{companyDetail.main_number}}</span></p>
 	</div>
 	<div class="row_left">
-		<label>How found</label>
-		<p>{{company.how_found}}</p>
+		<p>How found: <span class="row_left_bold">{{companyDetail.how_found}}</span></p>
 	</div>
 	<div class="row_left">
-		<label>Size</label>
-		<p>{{company.size}}</p>
+		<p>Size: <span class="row_left_bold">{{companyDetail.size}}</span></p>
 	</div>
 	<div class="row_left">
-		<p>{{company.created_at}}</p>
+		<p>{{companyDetail.created_at}}</p>
 	</div>
 </div>
 <div class="col">
 	<div class="row_left">
-		<label>Glassdoor score</label>
-		<p>{{company.glassdoor_score}}</p>
+		<p>Glassdoor score: <span class="row_left_bold">{{companyDetail.glassdoor_score}}</span></p>
 	</div>
 	<div class="row_left">
-		<label>Glassdoor link</label>
-		<p>{{company.glassdoor_link}}</p>
-	</div>
-	<div class="row_left">
-		<label>Google score</label>
-		<p>{{company.google_score}}</p>
+		<p>Google score: <span class="row_left_bold">{{companyDetail.google_score}}</span></p>
 	</div>		
 	<div class="row_left">
-		<label>Google Link</label>
-		<p>{{company.google_link}}</p>
-	</div>	
-
-	<div class="row_left">
-		<label>Rating</label>
-		<p>{{company.}}</p>
+		<p>Rating: <span class="row_left_bold">{{companyDetail.rating}}</span></p>
 	</div>
 	<div class="row_left">
-		<label>Got me work</label>
-		<p>{{company.got_me_work}}</p>
+		<p>Got me work: <span class="row_left_bold">{{companyDetail.got_me_work}}</span></p>
 	</div>	
 	<div class="row_left">
-		<label>Notes</label>
-		<!-- <input class="myinput" type="text" ng-model="newCo.notes"> -->
-		<textarea class="myinput" rows="3">{{company.notes}}</textarea>
+		<p>Notes:</p>
+		<textarea class="myinput" rows="3">{{companyDetail.notes}}</textarea>
 	</div>
 </div>
+<br>
 
 <!-- Table for all contacs within that company -->
+<h4>Contact person in this company</h4>
 <table class="table table-striped" style="border:1px solid tan;">
 	<thead>
 		<tr>

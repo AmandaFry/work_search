@@ -59,6 +59,10 @@
 			margin: 10px 0px 10px 0px;
 			text-align: left;
 		}
+
+		.row_left_bold{
+			font-weight: bold;
+		}
 		.rowbutton{
 			margin: 15px 0px 0px 170px;
 			text-align: left;
