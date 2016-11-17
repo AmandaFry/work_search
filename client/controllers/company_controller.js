@@ -11,23 +11,12 @@ myApp.controller('companyController', function ($scope,$rootScope, $location,$ro
 		$scope.companies = data;
 	})
 
- 	//this section for showing one company
-	//Able to capture ID from URL
-	// var companyId = $routeParams.id;
-	// companyFactory.showOne(companyId, function(data){
-	// 	$scope.companyDetail = data;
-	// 	console.log(data);
-	// 	$location.url('/company/' + companyId)
-	// })
-
-	//the two-way binding is not working it brings back all the data, but will not show it on the company page
+	//I had to implement $rootScope for the next page to see the returned value
 	$scope.showCompany = function(companyObj){
-		console.log('inside show company controller', companyObj)
+		//In the showCompnay click I pass the company object and pulling the id from there
 		var companyId = companyObj._id;
-		console.log('the id is', companyId)
 		companyFactory.showOne(companyId, function(data){
 			$rootScope.companyDetail = data;
-			console.log('show company that was returned from server', $rootScope.companyDetail);
 			$location.url('/company/' + companyId)
 		})
 	}
@@ -42,10 +31,10 @@ myApp.controller('companyController', function ($scope,$rootScope, $location,$ro
 	}
 
 	//when want to edit the company informaiton need to read in the data first
-	//immideatly redirect to company deatial page
  	$scope.editCompany = function(){
+ 		//I am using the URL for id
  		var companyId = $routeParams.id;
- 		companyFactory.showOneE(companyId, function(data){
+ 		companyFactory.showOne(companyId, function(data){
 			$rootScope.companyDetailE = data;
 			console.log('edit data', data);
 			$location.url('/company_edit/' + companyId)

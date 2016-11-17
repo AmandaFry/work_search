@@ -18,23 +18,23 @@
 </br>
 
 
-<form  name="newCompanyform">
+<form name="newCompanyform">
 <div class='col'>
 	<div class="row">
-		<label>Name - {{companyDetailE.name}}</label>
-		<input class="myinput" type="text" ng-model="newCo.name" ng-minlength='5' required value="something">
+		<label>Name</label>
+		<input class="myinput" type="text" ng-model="newCo.name" ng-minlength='5' required ng-value="{{companyDetailE.name}}">
 	</div>
 	<div class="row">
-		<label>Type</label>
-		<select class="myinput" type="text" ng-model="newCo.type" placeholder="{{companyDetailE.type}">
+		<label>Type - <span>{{companyDetailE.type}}</span></label>
+		<select class="myinput" type="text" ng-model="newCo.type" placeholder="{{companyDetailE.type}}">
 			<option>Contracting Agency</option>
 			<option>Direct</option>
 			<option>Vendor</option>
 		</select>
 	</div>	
 	<div class="row">
-		<label>Location</label>
-		<select class="myinput" type="text" ng-model="newCo.location">
+		<label>Location - {{companyDetailE.location}}</label>
+		<select class="myinput" type="text" ng-model="newCo.location" placeholder="{{companyDetailE.location}}">
 			<option>East Side</option>
 			<option>Seattle</option>
 			<option>Other</option>
@@ -42,19 +42,19 @@
 	</div>
 	<div class="row">
 		<label>Website</label>
-		<input class="myinput" type="text" ng-model="newCo.website" value="hello" placeholder="hello">
+		<input class="myinput" type="text" ng-model="newCo.website" value="hello" placeholder="{{companyDetailE.website}}">
 	</div>
 	<div class="row">
 		<label>Address</label>
-		<input class="myinput" type="text" ng-model="newCo.address" placeholder="{{companyDetailE.address}}">
+		<input class="myinput" type="text" ng-model="newCo.address" value="{{companyDetailE.address}}">
 	</div>
 	<div class="row">
 		<label>Main Number</label>
-		<input class="myinput" type="text" ng-model="newCo.main_number">
+		<input class="myinput" type="text" ng-model="newCo.main_number" placeholder="{{companyDetailE.main_number}}">
 	</div>
 	<div class="row">
 		<label>How found</label>
-		<input class="myinput" type="text" ng-model="newCo.how_found">
+		<input class="myinput" type="text" ng-model="newCo.how_found" placeholder="{{companyDetailE.how_found}}">
 	</div>
 	<div class="rowbutton">
 		<input class="btn btn-primary" type="submit" ng-click="createCompany()" value="Submit">
@@ -63,30 +63,30 @@
 <div class="col">
 	<div class="row">
 		<label>Size</label>
-		<input class="myinput" type="text" ng-model="newCo.size">
+		<input class="myinput" type="text" ng-model="newCo.size" placeholder="{{companyDetailE.size}}">
 	</div>
 	<div class="row">
 		<label>Glassdoor score</label>
-		<input class="myinput" type="text" ng-model="newCo.glassdoor_score">
+		<input class="myinput" type="text" ng-model="newCo.glassdoor_score" placeholder="{{companyDetailE.glassdoor_score}}">
 	</div>
 	<div class="row">
 		<label>Google score</label>
-		<input class="myinput" type="text" ng-model="newCo.google_score">
+		<input class="myinput" type="text" ng-model="newCo.google_score" placeholder="{{companyDetailE.google_score}}">
 	</div>		
 	<div class="row">
 		<label>Rating</label>
-		<input class="myinput" type="number" ng-model="newCo.rating" min="1" max="10">
+		<input class="myinput" type="number" ng-model="newCo.rating" min="1" max="10" placeholder="{{companyDetailE.rating}}">
 	</div>
 	<div class="row">
-		<label>Got me work</label>
-		<select class="myinput" type="text" ng-model="newCo.got_me_work">
+		<label>Got me work - {{companyDetailE.got_me_work}}</label>
+		<select class="myinput" type="text" ng-model="newCo.got_me_work" placeholder="{{companyDetailE.got_me_work}}">
 			<option>No</option>
 			<option>Yes</option>
 		</select>
 	</div>	
 	<div class="row">
 		<label>Notes</label>
-		<textarea class="myinput" type="text" ng-model="newCo.notes" rows="3"></textarea>
+		<textarea class="myinput" type="text" ng-model="newCo.notes" rows="3" placeholder="{{companyDetailE.notes}}"></textarea>
 	</div>
 </div>
 </form>
