@@ -8,7 +8,6 @@ module.exports = function(app){
     });
 
 	app.post('/company/new', function(req,res){
-		// console.log(req.body);
 		company.create(req,res);
 	});
 

@@ -1,4 +1,4 @@
-myApp.controller('companyController', function ($scope,$rootScope, $location,$routeParams,$cookies,companyFactory){
+myApp.controller('companyController', function ($scope,$rootScope,$location,$routeParams,$cookies,companyFactory){
 
 	//CURRENT USER SECTION - this section to read from session cookie the current user info
 	//In user_factory I put/set the current user cookie - I call it here an dable to use it
@@ -21,7 +21,6 @@ myApp.controller('companyController', function ($scope,$rootScope, $location,$ro
 		})
 	}
 
-
 	//submit button adding new company
 	$scope.createCompany = function(){
 		$scope.newCo.owner = $scope.currentUser.name;
@@ -36,7 +35,7 @@ myApp.controller('companyController', function ($scope,$rootScope, $location,$ro
  		var companyId = $routeParams.id;
  		companyFactory.showOne(companyId, function(data){
 			$rootScope.companyDetailE = data;
-			console.log('edit data', data);
+			console.log('edit data left in to work on it later', data);
 			$location.url('/company_edit/' + companyId)
 		})
  	}

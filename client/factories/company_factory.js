@@ -8,17 +8,9 @@ myApp.factory('companyFactory', function($http,$cookies){
 	};
 
 	factory.showOne = function(id, callback){
-		console.log('inside showOne factory, the id is:', id)
 		$http.get('/company/' + id).success(function(data){
 			companyDetail = data;
 			callback(companyDetail);
-		})
-	}
-
-	factory.showOneE = function(id, callback){
-		$http.get('/company/' + id).success(function(data){
-			companyDetailE = data;
-			callback(companyDetailE);
 		})
 	}
 

@@ -22,10 +22,13 @@
 <div class='col'>
 	<div class="row">
 		<label>Name</label>
+		<!-- Place holder will not be submitted I need to figure out how ot add value inside input -->
 		<input class="myinput" type="text" ng-model="newCo.name" ng-minlength='5' required ng-value="{{companyDetailE.name}}">
+		<!-- <input class="myinput" type="text" ng-model="newCo.name" ng-minlength='5' required value="{{companyDetailE.name}}"> -->
 	</div>
 	<div class="row">
 		<label>Type - <span>{{companyDetailE.type}}</span></label>
+		<!-- Placeholder does not work in drop down, need to figure that one out too -->
 		<select class="myinput" type="text" ng-model="newCo.type" placeholder="{{companyDetailE.type}}">
 			<option>Contracting Agency</option>
 			<option>Direct</option>
@@ -46,7 +49,7 @@
 	</div>
 	<div class="row">
 		<label>Address</label>
-		<input class="myinput" type="text" ng-model="newCo.address" value="{{companyDetailE.address}}">
+		<input class="myinput" type="text" ng-model="newCo.address" placeholder="{{companyDetailE.address}}">
 	</div>
 	<div class="row">
 		<label>Main Number</label>
