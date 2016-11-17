@@ -18,8 +18,8 @@ module.exports = function(app){
 
 	app.get('/company/:id', function(req, res){
 		console.log('reached company/id route');
-		console.log(req.body);
-		console.log(req.params.id)
+		console.log('the body is', req.body);
+		console.log('my id is', req.params.id)
 		company.showOne(req, res);
 	})
 }

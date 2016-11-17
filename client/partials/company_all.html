@@ -42,7 +42,8 @@
 			<td>{{company.website}}</td>
 			<td>{{company.glassdoor_score}}</td>
 			<td>{{company.rating}}</td>
-			<td><a href="#/company/{{company._id}}">Contact Detail</a></td>
+			<!-- <td><a href="#/company/{{company._id}}">Contact Detail</a></td> -->
+			<td><input class="btn btn-primary" type="submit" ng-click="showCompany(company)" value="Company Detail"></td>
 		</tr>
 	</tbody>
 </table>

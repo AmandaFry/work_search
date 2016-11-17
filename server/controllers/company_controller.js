@@ -36,6 +36,7 @@ module.exports = {
 				console.log(err);
 			else
 				res.json(data);
+				console.log('my record is', data)
 		})
 	}
 

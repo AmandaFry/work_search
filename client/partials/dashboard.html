@@ -1,39 +1,36 @@
-<div ng-controller='dashboardController'>
 <!-- navigation  -->
-	<nav class="nav navbar-nav navbar-right">
-	  <div class="container-fluid">
+<nav class="nav navbar-nav navbar-right">
+	<div class="container-fluid">
 <!-- 	    <div class="navbar-header">
 	        <a class="navbar-brand" href="#/company">Company</a>
 	        <a class="navbar-brand" href="#/">Logout</a>
 	    </div> -->
-	    	<ul class="nav navbar-nav">
-		    	<!-- dropdown is not working within the partial only in index page out side ng-view div -->
-<!-- 		      	<li class="dropdown" uib-dropdown>
-		        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Company
-		        	<span class="caret"></span></a>
-	        		<ul class="dropdown-menu">
-			          	<li><a href="#/new_company">New Company</a></li>
-			          	<li><a href="#/companies">All Companies</a></li>
-			          	<li><a href="#/extra">Extra</a></li> 
-	        		</ul>
-      			</li> -->
-      			<li><a href="#/company_all">Company</a></li>
-		      	<li><a href="#/contact_all">Contact</a></li>
-		      	<li><a href="#/events">Events</a></li>
-		      	<li><a href="#/todo">Todo</a></li>
-		      	<li><a href="#/archived">Archived</a></li>
-		      	<li><a href="#/">Logout</a></li> 
-    		</ul>
-	  </div>
+    	<ul class="nav navbar-nav">
+	    	<!-- dropdown is not working within the partial only in index page out side ng-view div -->
+<!-- 	      	<li class="dropdown" uib-dropdown>
+	        	<a class="dropdown-toggle" data-toggle="dropdown" href="#">Company
+	        	<span class="caret"></span></a>
+        		<ul class="dropdown-menu">
+		          	<li><a href="#/new_company">New Company</a></li>
+		          	<li><a href="#/companies">All Companies</a></li>
+		          	<li><a href="#/extra">Extra</a></li> 
+        		</ul>
+  			</li> -->
+  			<li><a href="#/company_all">Company</a></li>
+	      	<li><a href="#/contact_all">Contact</a></li>
+	      	<li><a href="#/events">Events</a></li>
+	      	<li><a href="#/todo">Todo</a></li>
+	      	<li><a href="#/archived">Archived</a></li>
+	      	<li><a href="#/">Logout</a></li> 
+		</ul>
+	 </div>
 	</nav></br>
-
-
-
-
 	<!-- Welcome section and search -->
 	<h2>Welcome {{currentUser.name}}</h2>
 	<p>{{currentUser._id}}</p>
 	</br>
 
 
-</div>
+
+
+

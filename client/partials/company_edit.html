@@ -1,0 +1,93 @@
+<!-- navigation  -->
+<nav class="nav navbar-nav navbar-right">
+  <div class="container-fluid">
+    	<ul class="nav navbar-nav">
+  			<li><a href="#/dashboard">Home</a></li>
+	      	<li><a href="#/contact">Contact</a></li>
+	      	<li><a href="#/events">Events</a></li>
+	      	<li><a href="#/todo">Todo</a></li>
+	      	<li><a href="#/archived">Archived</a></li>
+	      	<li><a href="#/">Logout</a></li> 
+		</ul>
+  </div>
+</nav></br>
+
+<!-- Welcome section and search -->
+<h2>Edit Company</h2>
+<p>Welcome {{currentUser.name}} - {{currentUser._id}}</p>
+</br>
+
+
+<form  name="newCompanyform">
+<div class='col'>
+	<div class="row">
+		<label>Name - {{companyDetailE.name}}</label>
+		<input class="myinput" type="text" ng-model="newCo.name" ng-minlength='5' required value="something">
+	</div>
+	<div class="row">
+		<label>Type</label>
+		<select class="myinput" type="text" ng-model="newCo.type" placeholder="{{companyDetailE.type}">
+			<option>Contracting Agency</option>
+			<option>Direct</option>
+			<option>Vendor</option>
+		</select>
+	</div>	
+	<div class="row">
+		<label>Location</label>
+		<select class="myinput" type="text" ng-model="newCo.location">
+			<option>East Side</option>
+			<option>Seattle</option>
+			<option>Other</option>
+		</select>
+	</div>
+	<div class="row">
+		<label>Website</label>
+		<input class="myinput" type="text" ng-model="newCo.website" value="hello" placeholder="hello">
+	</div>
+	<div class="row">
+		<label>Address</label>
+		<input class="myinput" type="text" ng-model="newCo.address" placeholder="{{companyDetailE.address}}">
+	</div>
+	<div class="row">
+		<label>Main Number</label>
+		<input class="myinput" type="text" ng-model="newCo.main_number">
+	</div>
+	<div class="row">
+		<label>How found</label>
+		<input class="myinput" type="text" ng-model="newCo.how_found">
+	</div>
+	<div class="rowbutton">
+		<input class="btn btn-primary" type="submit" ng-click="createCompany()" value="Submit">
+	</div>
+</div>
+<div class="col">
+	<div class="row">
+		<label>Size</label>
+		<input class="myinput" type="text" ng-model="newCo.size">
+	</div>
+	<div class="row">
+		<label>Glassdoor score</label>
+		<input class="myinput" type="text" ng-model="newCo.glassdoor_score">
+	</div>
+	<div class="row">
+		<label>Google score</label>
+		<input class="myinput" type="text" ng-model="newCo.google_score">
+	</div>		
+	<div class="row">
+		<label>Rating</label>
+		<input class="myinput" type="number" ng-model="newCo.rating" min="1" max="10">
+	</div>
+	<div class="row">
+		<label>Got me work</label>
+		<select class="myinput" type="text" ng-model="newCo.got_me_work">
+			<option>No</option>
+			<option>Yes</option>
+		</select>
+	</div>	
+	<div class="row">
+		<label>Notes</label>
+		<textarea class="myinput" type="text" ng-model="newCo.notes" rows="3"></textarea>
+	</div>
+</div>
+</form>
+

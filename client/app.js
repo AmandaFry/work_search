@@ -34,6 +34,16 @@ myApp.config(function ($routeProvider){
         controller: 'companyController',
     })    
 
+    .when('/company',{
+        templateUrl: 'partials/company.html',
+        controller: 'companyController',
+    })    
+
+    .when('/company_edit/:id',{
+        templateUrl: 'partials/company_edit.html',
+        controller: 'companyController',
+    })
+
     .when('/contact',{
         templateUrl: 'partials/contact.html',
         controller: 'contactController',
