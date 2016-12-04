@@ -15,29 +15,28 @@
 <!-- Welcome section and search -->
 <h2>Edit Company</h2>
 <p>Welcome {{currentUser.name}} - {{currentUser._id}}</p>
+<p>my company id {{newCo._id}}</p>
 </br>
+
 
 
 <form name="newCompanyform">
 <div class='col'>
 	<div class="row">
 		<label>Name</label>
-		<!-- Place holder will not be submitted I need to figure out how ot add value inside input -->
-		<input class="myinput" type="text" ng-model="newCo.name" ng-minlength='5' required ng-value="{{companyDetailE.name}}">
-		<!-- <input class="myinput" type="text" ng-model="newCo.name" ng-minlength='5' required value="{{companyDetailE.name}}"> -->
+		<input class="myinput" type="text" ng-model="newCo.name" ng-minlength='5' required >
 	</div>
 	<div class="row">
-		<label>Type - <span>{{companyDetailE.type}}</span></label>
-		<!-- Placeholder does not work in drop down, need to figure that one out too -->
-		<select class="myinput" type="text" ng-model="newCo.type" placeholder="{{companyDetailE.type}}">
+		<label>Type</label>
+		<select class="myinput" type="text" ng-model="newCo.type">
 			<option>Contracting Agency</option>
 			<option>Direct</option>
 			<option>Vendor</option>
 		</select>
 	</div>	
 	<div class="row">
-		<label>Location - {{companyDetailE.location}}</label>
-		<select class="myinput" type="text" ng-model="newCo.location" placeholder="{{companyDetailE.location}}">
+		<label>Location</label>
+		<select class="myinput" type="text" ng-model="newCo.location">
 			<option>East Side</option>
 			<option>Seattle</option>
 			<option>Other</option>
@@ -45,51 +44,51 @@
 	</div>
 	<div class="row">
 		<label>Website</label>
-		<input class="myinput" type="text" ng-model="newCo.website" value="hello" placeholder="{{companyDetailE.website}}">
+		<input class="myinput" type="text" ng-model="newCo.website" >
 	</div>
 	<div class="row">
 		<label>Address</label>
-		<input class="myinput" type="text" ng-model="newCo.address" placeholder="{{companyDetailE.address}}">
+		<input class="myinput" type="text" ng-model="newCo.address">
 	</div>
 	<div class="row">
 		<label>Main Number</label>
-		<input class="myinput" type="text" ng-model="newCo.main_number" placeholder="{{companyDetailE.main_number}}">
+		<input class="myinput" type="text" ng-model="newCo.main_number">
 	</div>
 	<div class="row">
 		<label>How found</label>
-		<input class="myinput" type="text" ng-model="newCo.how_found" placeholder="{{companyDetailE.how_found}}">
+		<input class="myinput" type="text" ng-model="newCo.how_found">
 	</div>
 	<div class="rowbutton">
-		<input class="btn btn-primary" type="submit" ng-click="createCompany()" value="Submit">
+		<input class="btn btn-primary" type="submit" ng-click="updateCompany(newCo)" value="Submit">
 	</div>
 </div>
 <div class="col">
 	<div class="row">
 		<label>Size</label>
-		<input class="myinput" type="text" ng-model="newCo.size" placeholder="{{companyDetailE.size}}">
+		<input class="myinput" type="text" ng-model="newCo.size">
 	</div>
 	<div class="row">
 		<label>Glassdoor score</label>
-		<input class="myinput" type="text" ng-model="newCo.glassdoor_score" placeholder="{{companyDetailE.glassdoor_score}}">
+		<input class="myinput" type="text" ng-model="newCo.glassdoor_score">
 	</div>
 	<div class="row">
 		<label>Google score</label>
-		<input class="myinput" type="text" ng-model="newCo.google_score" placeholder="{{companyDetailE.google_score}}">
+		<input class="myinput" type="text" ng-model="newCo.google_score">
 	</div>		
 	<div class="row">
 		<label>Rating</label>
-		<input class="myinput" type="number" ng-model="newCo.rating" min="1" max="10" placeholder="{{companyDetailE.rating}}">
+		<input class="myinput" type="number" ng-model="newCo.rating" min="1" max="10">
 	</div>
 	<div class="row">
-		<label>Got me work - {{companyDetailE.got_me_work}}</label>
-		<select class="myinput" type="text" ng-model="newCo.got_me_work" placeholder="{{companyDetailE.got_me_work}}">
+		<label>Got me work</label>
+		<select class="myinput" type="text" ng-model="newCo.got_me_work">
 			<option>No</option>
 			<option>Yes</option>
 		</select>
 	</div>	
 	<div class="row">
 		<label>Notes</label>
-		<textarea class="myinput" type="text" ng-model="newCo.notes" rows="3" placeholder="{{companyDetailE.notes}}"></textarea>
+		<textarea class="myinput" type="text" ng-model="newCo.notes" rows="3"></textarea>
 	</div>
 </div>
 </form>

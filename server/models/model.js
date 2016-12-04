@@ -28,7 +28,35 @@ var companySchema = new mongoose.Schema({
 	rating: {type: Number},
 	got_me_work: {type: String},
 	notes: {type: String},
+	contact: [{type: mongoose.Schema.Types.ObjectId, ref: 'Contact'}],
 }, {timestamps: true});
 
-//creating the Compnay table
+//creating the Company table
 var Company = mongoose.model('Company', companySchema);
+
+
+//CONTACT SECTION
+var contactSchema = new mongoose.Schema({
+	owner: {type:String, required:true},
+	first_name: {type:String, require:true},
+	last_name: {type:String, required:true},
+	// company: {type:String, required: true},//needs to be thigth to company
+	//creating an association 
+	_company: {type: mongoose.Schema.Types.ObjectId, ref: 'Company'},//needs to be thigth to company
+	work_email: {type:String},
+	personal_email: {type:String},
+	cell_number: {type:String},
+	work_number: {type:String},
+	other_number: {type:String},
+	linkedin: {type:String},
+	how_contact: {type:String},
+	when_contact: {type:Date},
+	last_contact: {type:Date},
+	rating: {type:Number},
+	got_me_work: {type:String},
+	notes: {type:String},
+}, {timestamps:true});
+
+//creating the Contact table
+
+var Contact = mongoose.model('Contact', contactSchema);

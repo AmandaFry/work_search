@@ -49,14 +49,14 @@ myApp.config(function ($routeProvider){
         controller: 'contactController',
     })
 
-    .when('/contact_all',{
-        templateUrl: 'partials/contact_all.html',
-        controller: 'contactController',
-    })
-
     .when ('/contact_new',{
         templateUrl: 'partials/contact_new.html',
         controller: 'contactController',       
+    })
+
+    .when('/contact_all',{
+        templateUrl: 'partials/contact_all.html',
+        controller: 'contactController',
     })
 
     .when('/todo',{

@@ -12,17 +12,16 @@
   </div>
 </nav></br>
 
-<p>contact page</p>
 <!-- Welcome section and search -->
-<h2>Welcome {{currentUser.name}}</h2>
-<p>{{currentUser._id}}</p>
+<h2>Add New Contact</h2>
+<p>Welcome {{currentUser.name}} - {{currentUser._id}}</p>
 </br>
 
-<form  name="newContactform">
+<form name="newContactform">
 <div class='col'>
 	<div class="row">
 		<label>First Name</label>
-		<input class="myinput" type="text" ng-model="newC.first_name" ng-minlength='5' required>
+		<input class="myinput" type="text" ng-model="newC.first_name" ng-minlength='2' required>
 	</div>
 	<div class="row">
 		<label>Last Name</label>
@@ -53,7 +52,7 @@
 		<input class="myinput" type="text" ng-model="newC.other_number">
 	</div>
 	<div class="rowbutton">
-		<input class="btn btn-primary" type="submit" ng-click="contactCreate()" value="Submit">
+		<input class="btn btn-primary" type="submit" ng-click="createContact()" value="Submit">
 	</div>
 </div>
 <div class="col">
@@ -75,7 +74,7 @@
 	</div>	
 	<div class="row">
 		<label>Rate</label>
-		<input class="myinput" type="number" ng-model="newC.rate" min="1" max="10">
+		<input class="myinput" type="number" ng-model="newC.rating" min="1" max="10">
 	</div>
 	<div class="row">
 		<label>Got me work</label>

@@ -11,6 +11,15 @@ myApp.controller('companyController', function ($scope,$rootScope,$location,$rou
 		$scope.companies = data;
 	})
 
+
+	//submit button adding new company
+	$scope.createCompany = function(){
+		$scope.newCo.owner = $scope.currentUser.name;
+		companyFactory.create($scope.newCo, function(){
+			$location.url('/company_all');
+		});
+	}
+
 	//I had to implement $rootScope for the next page to see the returned value
 	$scope.showCompany = function(companyObj){
 		//In the showCompnay click I pass the company object and pulling the id from there
@@ -21,25 +30,22 @@ myApp.controller('companyController', function ($scope,$rootScope,$location,$rou
 		})
 	}
 
-	//submit button adding new company
-	$scope.createCompany = function(){
-		$scope.newCo.owner = $scope.currentUser.name;
-		companyFactory.create($scope.newCo, function(){
-			$location.url('/company_all');
-		});
-	}
-
-	//when want to edit the company informaiton need to read in the data first
  	$scope.editCompany = function(){
  		//I am using the URL for id
  		var companyId = $routeParams.id;
  		companyFactory.showOne(companyId, function(data){
-			$rootScope.companyDetailE = data;
-			console.log('edit data left in to work on it later', data);
+ 			//LESON: I had a bug when I was trying to use value, 
+ 			//but I just needed to put it inside ng-model in that case no need ot recreate new value.
+ 			// $rootScope.companyDetailE = data;
+			$rootScope.newCo = data;
 			$location.url('/company_edit/' + companyId)
 		})
  	}
 
-
+ 	$scope.updateCompany = function(updateData){
+ 		companyFactory.updateCompany(updateData, function(data){
+ 			$location.url('/company/' + companyId)
+ 		});
+ 	}
 
 })
